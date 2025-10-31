@@ -1,3 +1,5 @@
+https://platform.openai.com/docs/guides/image-generation?utm_source=chatgpt.com&image-generation-model=gpt-image-1&api=image&multi-turn=responseid
+
 # OpenAI API 图像生成功能网页总结
 ## 一、核心API选择
 OpenAI提供两种图像生成相关API，适用于不同场景，且均支持自定义输出（调整质量、尺寸、格式等）。
