@@ -1,3 +1,5 @@
+https://www.youtube.com/watch?v=le3tJIcXyaQ
+
 # 用FastAPI部署机器学习模型：完整实战指南（基于Iris数据集）
 本文基于视频内容，详细归纳了使用FastAPI部署机器学习模型的完整流程，涵盖环境准备、模型训练与保存、FastAPI应用搭建、数据验证、接口测试等核心环节，适合需要快速实现模型服务化的开发者参考。
 
