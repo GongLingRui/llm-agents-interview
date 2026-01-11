@@ -28,3 +28,18 @@ attention：diffusers库已经默认集成pytorch的scaled_dot_prod_uct_attentio
 
 nvidia-smi确认显存占用平稳的抑郁cpu_offloead和vae_tiling
 
+重构的部分：
+
+零磁盘io：修改了flux server接口，直接在内存当中处理图像数据流io.BytesIO移除了之前生产图片到/tmp在读取的低效的逻辑
+
+显存减负：启用了Diffusers的enable_model_cpu_offloead（0允许显存资源在不推理的时候释放给其他的进程，预计可以降低2-4gb的显存占用
+
+非阻塞的推理：将gpu推理任务放入独立的线程池，防止阻塞fastapi主事件循环，提升了服务的并发响应能力
+
+ffmpeg的性能和异步化
+
+硬件加速hardware acceleration实现了智能硬件加速检测，系统会自动检测允许环境
+
+-hwaccel videotoolbox
+
+
