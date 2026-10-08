@@ -38,14 +38,70 @@
 <body>
   <div id="app">加载中…</div>
   <script>
+    // GitHub Pages 项目站：/agent-engineering-handbook/；本地根目录预览则为 /
+    var GH_PAGES_BASE = '/agent-engineering-handbook/';
+    var docsifyBasePath =
+      location.pathname.indexOf(GH_PAGES_BASE) === 0 ? GH_PAGES_BASE : './';
+
+    function resolveDocPath(baseFile, href) {
+      if (!href || /^(https?:|mailto:|tel:)/i.test(href)) return href;
+      if (href.charAt(0) === '#') return href;
+
+      var hash = '';
+      var hashIdx = href.indexOf('#');
+      if (hashIdx >= 0) {
+        hash = href.slice(hashIdx);
+        href = href.slice(0, hashIdx);
+      }
+      if (!href) return hash;
+
+      // 站点根绝对路径：去掉前导 /，交给 Docsify hash 路由
+      if (href.charAt(0) === '/') {
+        return href.replace(/^\//, '') + hash;
+      }
+
+      baseFile = String(baseFile || '').replace(/^\//, '');
+      var baseDir = baseFile.indexOf('/') >= 0 ? baseFile.replace(/\/[^/]*$/, '/') : '';
+      var parts = (baseDir + href).split('/');
+      var stack = [];
+      for (var i = 0; i < parts.length; i++) {
+        var p = parts[i];
+        if (!p || p === '.') continue;
+        if (p === '..') {
+          if (stack.length) stack.pop();
+        } else {
+          stack.push(p);
+        }
+      }
+      return stack.join('/') + hash;
+    }
+
+    function rewriteRelativeMarkdownLinks(content, file) {
+      var parts = content.split(/(```[\s\S]*?```|`[^`\n]+`)/g);
+      for (var i = 0; i < parts.length; i++) {
+        // 跳过 fenced / inline code
+        if (parts[i].charAt(0) === '`') continue;
+        parts[i] = parts[i].replace(
+          /\]\((?!https?:|mailto:|tel:|#|\/)([^)\s]+)\)/g,
+          function (_m, href) {
+            return '](/' + resolveDocPath(file, href) + ')';
+          }
+        );
+      }
+      return parts.join('');
+    }
+
     window.$docsify = {
       name: 'Agent Engineering Handbook',
+      nameLink: '#/',
       repo: 'VanGong1999/agent-engineering-handbook',
       homepage: 'README.md',
+      basePath: docsifyBasePath,
       loadSidebar: true,
       loadNavbar: true,
       subMaxLevel: 3,
       auto2top: true,
+      // 正文相对当前文档解析；侧栏/_navbar 使用 / 绝对路径避免嵌套页下 404
       relativePath: true,
       maxLevel: 4,
       search: {
@@ -69,7 +125,16 @@
         theme: 'default',
         securityLevel: 'loose',
         flowchart: { htmlLabels: true, curve: 'basis' }
-      }
+      },
+      plugins: [
+        function (hook, vm) {
+          hook.beforeEach(function (content) {
+            var file = vm.route.file || vm.route.path || '';
+            if (!file || file === '/') return content;
+            return rewriteRelativeMarkdownLinks(content, file);
+          });
+        }
+      ]
     }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
