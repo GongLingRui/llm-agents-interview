@@ -48,7 +48,7 @@
 - [fine-tuning](./runtime/fine-tuning/README.md) ← Canonical: [`concepts/runtime/fine-tuning/`](../concepts/runtime/fine-tuning/)
 - [llm-inference](./runtime/llm-inference/README.md) ← Canonical: [`concepts/runtime/llm-inference/`](../concepts/runtime/llm-inference/)
 - [model-optimization](./runtime/model-optimization/README.md) ← Canonical: [`concepts/runtime/model-optimization/`](../concepts/runtime/model-optimization/)
-- [reinforcement-learning](./runtime/reinforcement-learning/README.md) ← Canonical: [`concepts/runtime/reinforcement-learning/`](../concepts/runtime/reinforcement-learning/)
+- [reinforcement-learning](./runtime/reinforcement-learning/README.md) ← Canonical: [`concepts/runtime/reinforcement-learning/`](../concepts/runtime/reinforcement-learning/) · 经验：[Agentic RL / Hermes](./runtime/reinforcement-learning/agentic-rl.md)
 - [sandbox](./runtime/sandbox/README.md) ← Canonical: [`concepts/runtime/sandbox/`](../concepts/runtime/sandbox/)
 
 ### production
