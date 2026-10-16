@@ -1,3 +1,10 @@
+every modern agent harness has 2 categories of tools.
+
+Prebuilt tools which ship with the harness（read,write,edit,bash,grep.ls,find)
+
+External tools defined by user during design time runtime
+
+
 ```typescript
 export interface ToolDefinition<TParams, TDetails> {
     name: string;                // used in the model's tool calls
