@@ -1,6 +1,29 @@
 * [首页](/README.md)
 * [贡献指南](/CONTRIBUTING.md)
 
+## 面试与读书笔记
+* [总览](/llm-agents-interview/README.md)
+* [AI Agent 读书笔记](/llm-agents-interview/ai-agent-notes/README.md)
+  * [00 引言](/llm-agents-interview/ai-agent-notes/00-引言与全书导读.md)
+  * [01 入门](/llm-agents-interview/ai-agent-notes/01-AI-Agent入门.md)
+  * [02 上下文工程](/llm-agents-interview/ai-agent-notes/02-上下文工程.md)
+  * [03 记忆与知识库](/llm-agents-interview/ai-agent-notes/03-用户记忆和知识库.md)
+  * [04 工具](/llm-agents-interview/ai-agent-notes/04-工具.md)
+  * [05 Coding Agent](/llm-agents-interview/ai-agent-notes/05-Coding-Agent与通用Agent.md)
+  * [06 交互](/llm-agents-interview/ai-agent-notes/06-交互.md)
+  * [07 评估](/llm-agents-interview/ai-agent-notes/07-Agent的评估.md)
+  * [08 后训练](/llm-agents-interview/ai-agent-notes/08-模型后训练.md)
+  * [09 持续进化](/llm-agents-interview/ai-agent-notes/09-Agent的持续进化.md)
+  * [10 多 Agent](/llm-agents-interview/ai-agent-notes/10-多Agent协作.md)
+  * [11 后记](/llm-agents-interview/ai-agent-notes/11-后记与全书核心总结.md)
+* [大模型原理](/llm-agents-interview/大模型原理/LLM与Agent技术知识汇总.md)
+  * [RAG 汇总](/llm-agents-interview/大模型原理/RAG知识汇总-全量.md)
+  * [上下文工程](/llm-agents-interview/大模型原理/上下文工程-全量合并.md)
+  * [分词方法](/llm-agents-interview/大模型原理/分词方法总结.md)
+  * [解码策略](/llm-agents-interview/大模型原理/大模型解码策略.md)
+* [参考文章](/llm-agents-interview/参考文章/agent.md)
+* [课程 CS329A](/CS329A自我改进智能体/README.md)
+
 ## Engineering Experience
 * [总览](/engineering-experience/README.md)
 

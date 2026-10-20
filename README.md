@@ -240,9 +240,9 @@ agent-engineering-handbook/
 
 站点（GitHub Pages / Docsify）：
 
-**https://vangong1999.github.io/agent-engineering-handbook/**
+**https://vangong1999.github.io/llm-agents-interview/**
 
-源码仓库：https://github.com/VanGong1999/agent-engineering-handbook
+源码仓库：https://github.com/VanGong1999/llm-agents-interview
 
 ---
 

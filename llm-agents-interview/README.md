@@ -2,7 +2,7 @@
 
 > 大模型（LLM）与 AI Agent 面试 / 学习知识库，覆盖 Transformer 原理、后训练、RAG、上下文工程、Agent 设计与评估、多智能体协作等主题。
 
-仓库地址：https://github.com/GongLingRui/llm-agents-interview
+仓库地址：https://github.com/VanGong1999/llm-agents-interview
 
 ---
 
