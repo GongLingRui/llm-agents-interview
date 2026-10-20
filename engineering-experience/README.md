@@ -30,7 +30,7 @@
 - [agent-architecture](./core/agent-architecture/README.md) ← Canonical: [`concepts/core/agent-architecture/`](../concepts/core/agent-architecture/)
 - [agent-loop](./core/agent-loop/README.md) ← Canonical: [`concepts/core/agent-loop/`](../concepts/core/agent-loop/)
 - [context-engineering](./core/context-engineering/README.md) ← Canonical: [`concepts/core/context-engineering/`](../concepts/core/context-engineering/)
-- [memory](./core/memory/README.md) ← Canonical: [`concepts/core/memory/`](../concepts/core/memory/)
+- [memory](./core/memory/README.md) ← Canonical: [`concepts/core/memory/`](../concepts/core/memory/) · 经验：[设计方法论](./core/memory/agent-memory-design-methodology.md)、[五层记忆 Playbook](./core/memory/agent-memory-5-layer-playbook.md)、[架构全景](./core/memory/agent-memory-architecture-panorama.md)
 - [prompt-engineering](./core/prompt-engineering/README.md) ← Canonical: [`concepts/core/prompt-engineering/`](../concepts/core/prompt-engineering/)
 - [rag](./core/rag/README.md) ← Canonical: [`concepts/core/rag/`](../concepts/core/rag/)
 - [reasoning-planning](./core/reasoning-planning/README.md) ← Canonical: [`concepts/core/reasoning-planning/`](../concepts/core/reasoning-planning/)
